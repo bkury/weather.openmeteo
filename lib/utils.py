@@ -536,9 +536,11 @@ def setalert(data, map, idx, locid, curid, loc, mode):
 				for wmo in limit:
 					if content == int(wmo):
 						hours[f'{alert[-1]}'] += 1
-						code  = int(alert[-1])
-						value = content
-						time  = data[map[1][0]]['time'][index]
+
+						if content > value:
+							code  = int(alert[-1])
+							value = content
+							time  = data[map[1][0]]['time'][index]
 
 	# Check alert code
 	if code != 0:
