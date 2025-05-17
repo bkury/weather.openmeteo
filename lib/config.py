@@ -779,6 +779,7 @@ def loc(locid, cache=False):
 	loc.id   = locid
 	loc.cid  = str(utils.settingrpc("weather.currentlocation"))
 	loc.name = utils.setting(f'loc{locid}', 'str')
+	loc.user = utils.setting(f'loc{locid}user', 'str')
 	loc.lat  = utils.setting(f'loc{locid}lat', 'float')
 	loc.lon  = utils.setting(f'loc{locid}lon', 'float')
 	loc.utz  = utils.setting(f'loc{locid}utz', 'bool')
