@@ -641,6 +641,4 @@ msgstr "Időjárás-előrejelzés az Open-Meteo-ból"
 
 msgctxt "#32501"
 msgid "Weather, maps, airquality and pollen forecast from open-meteo.com, rainviewer.com, weather.gc.ca and met.no"
-msgstr ""
-"Időjárás, térképek, levegőminőség és pollenelőrejelzés az open-meteo.com, a "
-"rainviewer.com, a weather.gc.ca és a met.no oldalakról"
+msgstr "Időjárás, térképek, levegőminőség és pollenelőrejelzés az open-meteo.com, a rainviewer.com, a weather.gc.ca és a met.no oldalakról"
