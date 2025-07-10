@@ -26,6 +26,8 @@
 		<description lang="ta_in">திறந்த-மெட்டியோ.காம், ரெயின்வியூவர்.காம், வானிலை. GC.CA மற்றும் MET.NO இலிருந்து வானிலை, வரைபடங்கள், காற்றோட்டம் மற்றும் மகரந்த முன்னறிவிப்பு</description>
 		<summary lang="uk_ua">Прогноз погоди від Open-Meteo</summary>
 		<description lang="uk_ua">Прогноз погоди, мап , якість повітря та пилку від open-meteo.com, rainviewer.com, weather.gc.ca та met.no</description>
+		<summary lang="zh_cn">Open-Meteo 提供的天气预报</summary>
+		<description lang="zh_cn">天气、地图、空气质量和花粉预报来自 open-meteo.com、rainviewer.com、weather.gc.ca 和 met.no</description>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later</license>
 		<forum>https://forum.kodi.tv/forumdisplay.php?fid=155</forum>
