@@ -293,23 +293,23 @@ msgstr "详细"
 
 msgctxt "#32310"
 msgid "Location 1"
-msgstr "位置1"
+msgstr "位置 1"
 
 msgctxt "#32311"
 msgid "Location 2"
-msgstr "位置2"
+msgstr "位置 2"
 
 msgctxt "#32312"
 msgid "Location 3"
-msgstr "位置3"
+msgstr "位置 3"
 
 msgctxt "#32313"
 msgid "Location 4"
-msgstr "位置4"
+msgstr "位置 4"
 
 msgctxt "#32314"
 msgid "Location 5"
-msgstr "位置5"
+msgstr "位置 5"
 
 msgctxt "#32316"
 msgid "Use location timezone"
@@ -345,11 +345,11 @@ msgstr "美国空气质量指数"
 
 msgctxt "#32327"
 msgid "PM25"
-msgstr "细颗粒物2.5"
+msgstr "细颗粒物 2.5"
 
 msgctxt "#32328"
 msgid "PM10"
-msgstr "可吸入颗粒物10"
+msgstr "可吸入颗粒物 10"
 
 msgctxt "#32329"
 msgid "UV Index"
@@ -413,7 +413,7 @@ msgstr "正常"
 
 msgctxt "#32344"
 msgid "Negative"
-msgstr "负面"
+msgstr "无"
 
 msgctxt "#32345"
 msgid "Colours"
@@ -569,7 +569,7 @@ msgstr "新月"
 
 msgctxt "#32441"
 msgid "Waxing Crescent"
-msgstr "娥眉月（新月到上弦月）"
+msgstr "娥眉月"
 
 msgctxt "#32442"
 msgid "First Quarter"
@@ -577,7 +577,7 @@ msgstr "上弦月"
 
 msgctxt "#32443"
 msgid "Waxing Gibbous"
-msgstr "盈凸月（上弦月到满月）"
+msgstr "盈凸月"
 
 msgctxt "#32444"
 msgid "Full Moon"
@@ -585,7 +585,7 @@ msgstr "满月"
 
 msgctxt "#32445"
 msgid "Waning Gibbous"
-msgstr "亏凸月（满月到下弦月）"
+msgstr "亏凸月"
 
 msgctxt "#32446"
 msgid "Last Quarter"
@@ -593,7 +593,7 @@ msgstr "下弦月"
 
 msgctxt "#32447"
 msgid "Waning Crescent"
-msgstr "残月（下弦月到新月）"
+msgstr "残月"
 
 msgctxt "#32450"
 msgid "Alder"
