@@ -736,6 +736,7 @@ def addon(cache=False):
 	addon.particlesdp = utils.setting('unitparticlesdp', 'str', cache)
 	addon.pollendp    = utils.setting('unitpollendp', 'str', cache)
 	addon.uvindexdp   = utils.setting('unituvindexdp', 'str', cache)
+	addon.pressure    = utils.setting('unitpressure', 'str', cache)
 	addon.pressuredp  = utils.setting('unitpressuredp', 'str', cache)
 	addon.radiationdp = utils.setting('unitradiationdp', 'str', cache)
 	addon.cdefault    = utils.setting('colordefault', 'str', cache)

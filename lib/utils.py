@@ -300,9 +300,9 @@ def getprop(data, map, idx, count):
 
 	# Pressure
 	elif unit == 'pressure':
-		content = conv.dp(content, config.addon.pressuredp)
+		content = conv.pressure(content)
 	elif unit == 'unitpressure':
-		content = 'hPa'
+		content = conv.pressure()
 
 	# Direction
 	elif unit == 'direction':
