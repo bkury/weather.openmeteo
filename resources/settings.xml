@@ -442,19 +442,28 @@
 
 				<setting help="" id="loc1data" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
 				<setting help="" id="loc1map" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
-				<setting help="" id="loc1layer" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc1rv" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc1gc" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+
 				<setting help="" id="loc2data" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
 				<setting help="" id="loc2map" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
-				<setting help="" id="loc2layer" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc2rv" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc2gc" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+
 				<setting help="" id="loc3data" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
 				<setting help="" id="loc3map" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
-				<setting help="" id="loc3layer" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc3rv" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc3gc" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+
 				<setting help="" id="loc4data" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
 				<setting help="" id="loc4map" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
-				<setting help="" id="loc4layer" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc4rv" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc4gc" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+
 				<setting help="" id="loc5data" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
 				<setting help="" id="loc5map" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
-				<setting help="" id="loc5layer" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc5rv" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
+				<setting help="" id="loc5gc" label="32308" type="string"><default></default><constraints><allowempty>true</allowempty></constraints><visible>false</visible><control type="edit" format="string"></control></setting>
 			</group>
 
 			<group id="5" label="32283">

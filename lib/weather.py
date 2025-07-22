@@ -56,14 +56,21 @@ class Main():
 				if api.network():
 					utils.setupdate(f'loc{locid}map')
 
-
-			# Layers
-			if utils.lastupdate(f'loc{locid}layer') >= 1800:
+			# Rv
+			if utils.lastupdate(f'loc{locid}rv') >= 3600:
 				with ThreadPoolExecutor(2) as pool:
-					pool.map(self.getmap, config.map_layers)
+					pool.map(self.getmap, config.map_rv)
 
 				if api.network():
-					utils.setupdate(f'loc{locid}layer')
+					utils.setupdate(f'loc{locid}rv')
+
+			# Gc
+			if utils.lastupdate(f'loc{locid}gc') >= 10800:
+				with ThreadPoolExecutor(2) as pool:
+					pool.map(self.getmap, config.map_gc)
+
+				if api.network():
+					utils.setupdate(f'loc{locid}gc')
 
 		# Update
 		elif self.mode == 'update' or self.mode == 'kodi':

@@ -323,8 +323,9 @@ map_alert_condition = {
 # Mapping (Rainviewer)
 map_rvradar     = [ 'radar', 'past' ]
 map_rvsatellite = [ 'satellite', 'infrared' ]
-map_layers      = { 'rvradar': map_rvradar, 'rvsatellite': map_rvsatellite, 'gctemp': '', 'gcwind': '' }
-map_maps        = { 'osm': '', **map_layers }
+map_rv          = { 'rvradar': map_rvradar, 'rvsatellite': map_rvsatellite }
+map_gc          = { 'gctemp': '', 'gcwind': '' }
+map_layers      = { **map_rv, **map_gc }
 
 # Mapping WMO to KODI
 map_wmo = {
