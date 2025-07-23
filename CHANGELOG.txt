@@ -1,3 +1,10 @@
+v1.0.14 (22/07/2025)
+--------------------
+* Added pressure units: hPa, kPa, mmHg, inHg, psi
+* Adjust map download timers
+* Fix geolocation loop on broken KODI devices
+* Added translation: Chinese (thanks @wabisabi926)
+
 v1.0.10 (22/05/2025)
 --------------------
 * Custom location names
