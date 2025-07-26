@@ -26,7 +26,8 @@ class Main(xbmc.Monitor):
 					for locid in range(1, config.addon.maxlocs):
 						if utils.setting(f'loc{locid}'):
 							utils.setsetting(f'loc{locid}map', '321318000')
-							utils.setsetting(f'loc{locid}layer', '321318000')
+							utils.setsetting(f'loc{locid}rv', '321318000')
+							utils.setsetting(f'loc{locid}gc', '321318000')
 
 		self.old = current
 

@@ -197,7 +197,8 @@ def clearloc(locid, last=False):
 	if last:
 		utils.setsetting(f'loc{locid}data', '321318000')
 		utils.setsetting(f'loc{locid}map', '321318000')
-		utils.setsetting(f'loc{locid}layer', '321318000')
+		utils.setsetting(f'loc{locid}rv', '321318000')
+		utils.setsetting(f'loc{locid}gc', '321318000')
 	else:
 		utils.setsetting(f'loc{locid}', '')
 		utils.setsetting(f'loc{locid}user', '')
