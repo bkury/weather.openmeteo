@@ -274,6 +274,10 @@ class Main():
 		else:
 			count = 0
 
+		if not idx:
+			utils.log('Index invalid, weather data is not up to date ...', 3)
+			return
+
 		for index in range(idx, idx + max, 1):
 			map[0][2][0] = prop
 			self.setmap(src, map[0], index, count)
