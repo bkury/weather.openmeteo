@@ -159,7 +159,6 @@ def getrvindex(type):
 # Get location (GeoIP)
 def getloc(locid):
 	utils.log(f'Geolocation ...')
-	utils.setsetting('geoip', 'true')
 
 	# Get location
 	try:

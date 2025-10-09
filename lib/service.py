@@ -11,8 +11,8 @@ def Main():
 	utils.log(config.addon_info, 3)
 
 	# Geolocation
-	if not utils.setting('geoip') and not utils.setting('loc1'):
-		utils.setsetting('geoip', 'true')
+	if not utils.geoip() and not utils.setting('loc1'):
+		utils.geoip(True)
 		utils.setsetting('service', 'running')
 		weather.Main('1', mode='geoip')
 		weather.Main('1', mode='download')

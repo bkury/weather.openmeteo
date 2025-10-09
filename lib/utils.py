@@ -100,6 +100,16 @@ def settings(changed=False):
 def region(arg):
 	return xbmc.getRegion(arg)
 
+# Geolocation
+def geoip(create=False):
+	f = Path(f'{config.addon_data}/geoip')
+
+	if create:
+		with open(f, mode='w'):
+			pass
+	else:
+		return f.is_file()
+
 # Localization
 def loc(arg):
 	return xbmc.getLocalizedString(arg)
@@ -635,18 +645,8 @@ def index(arg, data):
 
 # Directory
 def createdir():
-	file = config.addon_data + 'w.txt'
-
-	try:
-		os.makedirs(config.addon_cache, exist_ok=True)
-		with open(file, 'w') as f:
-			f.write('w')
-	except Exception as e:
-		log(f'Addon data directory not writeable: {config.addon_data} {e}', 2)
-		xbmcgui.Dialog().notification('Weather Open-Meteo', 'Weather data directory not writeable, check log ...', xbmcgui.NOTIFICATION_ERROR, 15000)
-		sys.exit(1)
-	else:
-		os.remove(file)
+	p = Path(config.addon_data)
+	p.mkdir(parents=True, exist_ok=True)
 
 # Locations
 def locations():

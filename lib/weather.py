@@ -123,7 +123,8 @@ class Main():
 		self.today    = utils.dt('nowloc').strftime('%Y-%m-%d')
 
 		# Directory
-		os.makedirs(f'{config.addon_cache}/{locid}', exist_ok=True)
+		p = Path(f'{config.addon_cache}/{locid}')
+		p.mkdir(parents=True, exist_ok=True)
 
 	### GET DATA
 	def getdata(self, type):
