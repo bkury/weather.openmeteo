@@ -382,3 +382,21 @@ def moonphaseimage(deg):
 	elif deg >= 273 and deg <= 357:
 		return '7.png'
 
+# Season
+def season(lat):
+	d = utils.dt('dayofyear')
+
+	if lat >= 0:
+		n = True
+	else:
+		n = False
+
+	if d >= 80 and d <= 172:
+		return utils.locaddon(32471) if n else utils.locaddon(32473)
+	elif d >= 172 and d <= 264:
+		return utils.locaddon(32472) if n else utils.locaddon(32474)
+	elif d >= 264 and d <= 355:
+		return utils.locaddon(32473) if n else utils.locaddon(32471)
+	else:
+		return utils.locaddon(32474) if n else utils.locaddon(32472)
+

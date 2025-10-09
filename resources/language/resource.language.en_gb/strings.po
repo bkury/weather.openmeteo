@@ -642,6 +642,26 @@ msgctxt "#32456"
 msgid "grains"
 msgstr ""
 
+msgctxt "#32470"
+msgid "Season"
+msgstr ""
+
+msgctxt "#32471"
+msgid "Spring"
+msgstr ""
+
+msgctxt "#32472"
+msgid "Summer"
+msgstr ""
+
+msgctxt "#32473"
+msgid "Fall"
+msgstr ""
+
+msgctxt "#32474"
+msgid "Winter"
+msgstr ""
+
 msgctxt "#32500"
 msgid "Weather forecast from Open-Meteo"
 msgstr ""

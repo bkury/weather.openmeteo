@@ -48,6 +48,7 @@ mapcache = {}
 # Mapping (Weather)
 map_weather = [
 	[ "current",	[ 'latitude' ],				[ 'current', 'latitude' ],		'round2' ],
+	[ "current",	[ 'latitude' ],				[ 'current', 'season' ],		'season' ],
 	[ "current",	[ 'longitude' ],			[ 'current', 'longitude' ],		'round2' ],
 	[ "current",	[ 'elevation' ],			[ 'current', 'elevation' ],		'round' ],
 

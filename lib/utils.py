@@ -150,6 +150,8 @@ def dt(arg, stamp=0):
 			return datetime.fromisoformat(stamp).astimezone(config.loc.tz)
 		else:
 			return datetime.fromisoformat(stamp).astimezone()
+	elif arg == 'dayofyear':
+		return datetime.today().timetuple().tm_yday
 
 # Last update
 def lastupdate(arg):
@@ -335,6 +337,10 @@ def getprop(data, map, idx, count):
 
 	elif unit == 'moonphaseimage':
 		content = f'{config.addon_icons}/moon/{conv.moonphaseimage(int(content))}'
+
+	# Season
+	elif unit == 'season':
+		content = conv.season(float(content))
 
 	# Graphs
 	elif unit == 'graph':
