@@ -315,8 +315,10 @@ class Main():
 	### GET MAP
 	def getmap(self, type):
 
-		if not utils.setting(f'map{type}', 'bool'):
-			return
+		# Layers disabled
+		if not type == 'osm':
+			if not utils.setting(f'map{type}', 'bool') or not utils.setting(f'loc{config.loc.id}maps', 'bool'):
+				return
 
 		# Check connectivity
 		if not api.network():
@@ -362,7 +364,7 @@ class Main():
 
 		dir     = f'{config.addon_cache}/{config.loc.id}'
 		files   = sorted(list(Path(dir).glob(f'{type}_*')), reverse=True)
-		history = config.addon.maphistory * 2
+		history = config.addon.maphistory
 
 		for idx in range(0,100):
 
@@ -382,12 +384,18 @@ class Main():
 		index = 1
 		for layer in config.map_layers:
 
-			if not utils.setting(f'map{layer}', 'bool'):
+			# Layers disabled
+			if not utils.setting(f'map{layer}', 'bool') or not utils.setting(f'loc{config.loc.id}maps', 'bool'):
+				for item in [ 'area', 'layer', 'heading', 'time', 'legend' ]:
+					utils.setprop(f'Map.{index}.{item}', '')
+
+				index += 1
 				continue
 
+			# Files
 			dir     = f'{config.addon_cache}/{config.loc.id}'
 			files   = sorted(list(Path(dir).glob(f'{layer}_*')), reverse=True)
-			history = config.addon.maphistory * 2
+			history = config.addon.maphistory
 
 			# Area
 			if files:
