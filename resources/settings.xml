@@ -80,28 +80,33 @@
 				<setting id="unitprecipdp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
 
-			<group id="5" label="32300">
+			<group id="5" label="32217">
+				<setting id="unitsnow" type="string" label="32303" help=""><level>0</level><default>cm</default><constraints><options><option label="32379">cm</option><option label="32381">in</option></options></constraints><control type="list" format="string"><heading>32269</heading></control></setting>
+				<setting id="unitsnowdp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
+			</group>
+
+			<group id="6" label="32300">
 				<setting id="unitdistance" type="string" label="32303" help=""><level>0</level><default>km</default><constraints><options><option label="32410">m</option><option label="32411">km</option><option label="32412">mi</option></options></constraints><control type="list" format="string"><heading>32269</heading></control></setting>
 				<setting id="unitdistancedp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
 
-			<group id="6" label="32306">
+			<group id="7" label="32306">
 				<setting id="unitparticlesdp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
 
-			<group id="7" label="32267">
+			<group id="8" label="32267">
 				<setting id="unitpollendp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
 
-			<group id="8" label="32301">
+			<group id="9" label="32301">
 				<setting id="unituvindexdp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
 
-			<group id="9" label="32348">
+			<group id="10" label="32348">
 				<setting id="unitradiationdp" type="integer" label="32289" help=""><level>0</level><default>1</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
 
-			<group id="10" label="32347">
+			<group id="11" label="32347">
 				<setting id="unitpressure" type="string" label="32303" help=""><level>0</level><default>hPa</default><constraints><options><option label="32382">hPa</option><option label="32383">kPa</option><option label="32384">mmHg</option><option label="32385">inHg</option><option label="32386">psi</option></options></constraints><control type="list" format="string"><heading>32269</heading></control></setting>
 				<setting id="unitpressuredp" type="integer" label="32289" help=""><level>0</level><default>0</default><constraints><minimum>0</minimum><step>1</step><maximum>3</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 			</group>
@@ -149,7 +154,16 @@
 				<setting id="alert_precipitation_high_2" label="32341" type="number"><default>35</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_precipitation_high_3" label="32342" type="number"><default>40</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="3" label="32322">
+			<group id="3" label="32217">
+				<setting id="alert_snow_enabled" type="boolean" label="32268" help=""><level>0</level><default>true</default><control type="toggle"/></setting>
+				<setting id="alert_snow_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
+				<setting id="alert_snow_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
+				<setting id="alert_snow_danger" type="boolean" label="32342" help=""><level>0</level><default>true</default><control type="toggle"/></setting>
+				<setting id="alert_snow_high_1" label="32340" type="number"><default>1</default><control format="number" type="edit"></control></setting>
+				<setting id="alert_snow_high_2" label="32341" type="number"><default>3</default><control format="number" type="edit"></control></setting>
+				<setting id="alert_snow_high_3" label="32342" type="number"><default>5</default><control format="number" type="edit"></control></setting>
+			</group>
+			<group id="4" label="32322">
 				<setting id="alert_condition_enabled" type="boolean" label="32268" help=""><level>0</level><default>true</default><control type="toggle"/></setting>
 				<setting id="alert_condition_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_condition_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -158,7 +172,7 @@
 				<setting id="alert_condition_wmo_2" label="32341" type="string"><default>53 63 73 81</default><control type="edit" format="string"></control></setting>
 				<setting id="alert_condition_wmo_3" label="32342" type="string"><default>55 57 65 67 75 82 86 95 96 99</default><control type="edit" format="string"></control></setting>
 			</group>
-			<group id="4" label="32323">
+			<group id="5" label="32323">
 				<setting id="alert_windspeed_enabled" type="boolean" label="32268" help=""><level>0</level><default>true</default><control type="toggle"/></setting>
 				<setting id="alert_windspeed_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_windspeed_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -167,7 +181,7 @@
 				<setting id="alert_windspeed_high_2" label="32341" type="number"><default>75</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_windspeed_high_3" label="32342" type="number"><default>90</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="5" label="32324">
+			<group id="6" label="32324">
 				<setting id="alert_windgust_enabled" type="boolean" label="32268" help=""><level>0</level><default>true</default><control type="toggle"/></setting>
 				<setting id="alert_windgust_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_windgust_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -176,7 +190,7 @@
 				<setting id="alert_windgust_high_2" label="32341" type="number"><default>75</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_windgust_high_3" label="32342" type="number"><default>90</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="6" label="32329">
+			<group id="7" label="32329">
 				<setting id="alert_uvindex_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_uvindex_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_uvindex_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -185,7 +199,7 @@
 				<setting id="alert_uvindex_high_2" label="32341" type="number"><default>6</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_uvindex_high_3" label="32342" type="number"><default>8</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="7" label="32334">
+			<group id="8" label="32334">
 				<setting id="alert_cloudiness_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_cloudiness_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_cloudiness_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -194,7 +208,7 @@
 				<setting id="alert_cloudiness_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_cloudiness_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="8" label="32333">
+			<group id="9" label="32333">
 				<setting id="alert_dewpoint_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_dewpoint_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_dewpoint_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -203,7 +217,7 @@
 				<setting id="alert_dewpoint_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_dewpoint_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="9" label="32332">
+			<group id="10" label="32332">
 				<setting id="alert_feelslike_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_feelslike_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_feelslike_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -212,7 +226,7 @@
 				<setting id="alert_feelslike_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_feelslike_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="10" label="32346">
+			<group id="11" label="32346">
 				<setting id="alert_humidity_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_humidity_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_humidity_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -221,7 +235,7 @@
 				<setting id="alert_humidity_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_humidity_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="11" label="32321">
+			<group id="12" label="32321">
 				<setting id="alert_precipitationprobability_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_precipitationprobability_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_precipitationprobability_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -230,7 +244,7 @@
 				<setting id="alert_precipitationprobability_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_precipitationprobability_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="12" label="32347">
+			<group id="13" label="32347">
 				<setting id="alert_pressure_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_pressure_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_pressure_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -239,7 +253,7 @@
 				<setting id="alert_pressure_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_pressure_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="13" label="32347">
+			<group id="14" label="32347">
 				<setting id="alert_pressuresurface_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_pressuresurface_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_pressuresurface_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -248,7 +262,7 @@
 				<setting id="alert_pressuresurface_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_pressuresurface_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="14" label="32348">
+			<group id="15" label="32348">
 				<setting id="alert_solarradiation_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_solarradiation_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_solarradiation_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
@@ -257,7 +271,7 @@
 				<setting id="alert_solarradiation_high_2" label="32341" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 				<setting id="alert_solarradiation_high_3" label="32342" type="number"><default>0</default><control format="number" type="edit"></control></setting>
 			</group>
-			<group id="15" label="32349">
+			<group id="16" label="32349">
 				<setting id="alert_visibility_enabled" type="boolean" label="32268" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_visibility_notice" type="boolean" label="32340" help=""><level>0</level><default>false</default><control type="toggle"/></setting>
 				<setting id="alert_visibility_caution" type="boolean" label="32341" help=""><level>0</level><default>false</default><control type="toggle"/></setting>

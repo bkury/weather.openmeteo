@@ -282,6 +282,12 @@ def getprop(data, map, idx, count):
 	elif unit == 'unitprecipitation':
 		content = conv.precip()
 
+	# Snow
+	elif unit == 'snow':
+		content = conv.snow(content)
+	elif unit == 'unitsnow':
+		content = conv.snow()
+
 	# Distance
 	elif unit == 'distance':
 		content = conv.distance(content)
@@ -566,6 +572,9 @@ def setalert(data, map, idx, locid, curid, loc, mode):
 		if prop == 'temperature':
 			value = conv.temp(value)
 			unit  = conv.temp()
+		elif prop == 'snow':
+			value = conv.snow(value)
+			unit  = conv.snow()
 		elif prop == 'windspeed' or prop == 'windgust':
 			value = conv.speed(value)
 			unit  = conv.speed()

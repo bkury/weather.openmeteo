@@ -9,7 +9,7 @@ from . import utils
 map_api = {
 	'search': 'https://geocoding-api.open-meteo.com/v1/search?name={}&count=10&language=en&format=json',
 	'geoip': 'https://api.openht.org/geoipweather',
-	'weather': 'https://api.open-meteo.com/v1/forecast?latitude={}&longitude={}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m,dew_point_2m,precipitation_probability,visibility,uv_index,direct_radiation&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,apparent_temperature,precipitation_probability,precipitation,weather_code,pressure_msl,surface_pressure,cloud_cover,visibility,wind_speed_10m,wind_direction_10m,wind_gusts_10m,uv_index,is_day,direct_radiation&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,daylight_duration,sunshine_duration,uv_index_max,precipitation_hours&timeformat=unixtime&forecast_days=9&past_days=2',
+	'weather': 'https://api.open-meteo.com/v1/forecast?latitude={}&longitude={}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m,dew_point_2m,precipitation_probability,visibility,uv_index,direct_radiation&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,apparent_temperature,precipitation_probability,precipitation,snowfall,weather_code,pressure_msl,surface_pressure,cloud_cover,visibility,wind_speed_10m,wind_direction_10m,wind_gusts_10m,uv_index,is_day,direct_radiation&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,daylight_duration,sunshine_duration,uv_index_max,precipitation_hours&timeformat=unixtime&forecast_days=9&past_days=2',
 	'airquality': 'https://air-quality-api.open-meteo.com/v1/air-quality?latitude={}&longitude={}&current=european_aqi,us_aqi,pm10,pm2_5,carbon_monoxide,ozone,dust,nitrogen_dioxide,sulphur_dioxide,alder_pollen,birch_pollen,grass_pollen,mugwort_pollen,olive_pollen,ragweed_pollen&hourly=pm10,pm2_5,carbon_monoxide,ozone,dust,european_aqi,us_aqi,nitrogen_dioxide,sulphur_dioxide,alder_pollen,birch_pollen,grass_pollen,mugwort_pollen,olive_pollen,ragweed_pollen&timeformat=unixtime&forecast_days=7&past_days=2',
 	'sun': 'https://api.met.no/weatherapi/sunrise/3.0/sun?lat={}&lon={}&date={}',
 	'moon': 'https://api.met.no/weatherapi/sunrise/3.0/moon?lat={}&lon={}&date={}',
@@ -55,6 +55,7 @@ map_weather = [
 	[ "current",	[ 'current_units', 'wind_speed_10m' ],		[ 'unit', 'speed' ], 		'unitspeed' ],
 	[ "current",	[ 'current_units', 'temperature_2m' ],		[ 'unit', 'temperature' ], 	'unittemperature' ],
 	[ "current",	[ 'current_units', 'precipitation' ],		[ 'unit', 'precipitation' ],	'unitprecipitation' ],
+	[ "current",	[ 'current_units', 'snowfall' ],		[ 'unit', 'snow' ],		'unitsnow' ],
 	[ "current",	[ 'current_units', 'pressure_msl' ],		[ 'unit', 'pressure' ],		'unitpressure' ],
 	[ "current",	[ 'current_units', 'relative_humidity_2m' ],	[ 'unit', 'percent' ], 		'unitpercent' ],
 	[ "current",	[ 'hourly_units', 'visibility' ],		[ 'unit', 'distance' ],		'unitdistance' ],
@@ -111,6 +112,10 @@ map_weather = [
 	[ "hourlyskin",	[ 'hourly', "precipitation" ],			[ 'hourly', "precipitation" ],			"precipitation" ],
 	[ "currentskin",[ 'current', "precipitation_probability" ],	[ 'current', "precipitationprobability" ],	"round" ],
 	[ "hourlyskin",	[ 'hourly', "precipitation_probability" ],	[ 'hourly', "precipitationprobability" ],	"round" ],
+
+	[ "current",	[ 'current', "snowfall" ],			[ 'current', "snow" ],				"snow" ],
+	[ "hourly",	[ 'hourly', "snowfall" ],			[ 'hourly', "snow" ],				"snow" ],
+	[ "hourly",	[ 'hourly', "snowfall" ],			[ 'hourly', "snowgraph" ],			"graph", "10" ],
 
 	[ "current",	[ 'current', "pressure_msl" ],		[ 'current', "pressure" ],		"pressure" ],
 	[ "hourly",	[ 'hourly', "pressure_msl" ],		[ 'hourly', "pressure" ],		"pressure" ],
@@ -513,6 +518,13 @@ def alert(cache=False):
 			'alert_precipitation_high_2': utils.setting('alert_precipitation_high_2', 'str', cache),
 			'alert_precipitation_high_3': utils.setting('alert_precipitation_high_3', 'str', cache),
 		},
+	        'snowgraph': {
+			'type': 'snow',
+			'loc': 32217,
+			'alert_snow_high_1': utils.setting('alert_snow_high_1', 'str', cache),
+			'alert_snow_high_2': utils.setting('alert_snow_high_2', 'str', cache),
+			'alert_snow_high_3': utils.setting('alert_snow_high_3', 'str', cache),
+		},
 	        'conditiongraph': {
 			'type': 'condition',
 			'loc': 32322,
@@ -733,6 +745,8 @@ def addon(cache=False):
 	addon.speeddp     = utils.setting('unitspeeddp', 'str', cache)
 	addon.precip      = utils.setting('unitprecip', 'str', cache)
 	addon.precipdp    = utils.setting('unitprecipdp', 'str', cache)
+	addon.snow        = utils.setting('unitsnow', 'str', cache)
+	addon.snowdp      = utils.setting('unitsnowdp', 'str', cache)
 	addon.distance    = utils.setting('unitdistance', 'str', cache)
 	addon.distancedp  = utils.setting('unitdistancedp', 'str', cache)
 	addon.particlesdp = utils.setting('unitparticlesdp', 'str', cache)

@@ -291,6 +291,36 @@ def precipconv(value, unit):
 def precip(value=False):
 	return precipconv(value, config.addon.precip)
 
+# Snow
+def snowconv(value, unit):
+	if value is not False:
+		value = float(value)
+
+		if unit == 'in':
+			v = value / 2.54
+		else:
+			v = value
+
+		if config.addon.snowdp == '0':
+			return round(v)
+		else:
+			if config.addon.unitsep == ',':
+				return str(round(v,int(config.addon.snowdp))).replace('.',',')
+			else:
+				return round(v,int(config.addon.snowdp))
+
+	else:
+
+		if unit == 'in':
+			v = 'in'
+		else:
+			v = 'cm'
+
+		return v
+
+def snow(value=False):
+	return snowconv(value, config.addon.snow)
+
 # Pressure
 def pressureconv(value, unit):
 	if value is not False:

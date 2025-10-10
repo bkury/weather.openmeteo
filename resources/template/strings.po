@@ -529,6 +529,10 @@ msgctxt "#32372"
 msgid "Furlong/Fortnight"
 msgstr "Furlong/Fortnight"
 
+msgctxt "#32379"
+msgid "cm"
+msgstr "cm"
+
 msgctxt "#32380"
 msgid "mm"
 msgstr "mm"
