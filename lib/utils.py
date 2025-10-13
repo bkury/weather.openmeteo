@@ -78,14 +78,16 @@ def settingrpc(setting):
 def settings(changed=False):
 	dict = {}
 	skip = [ 'alert_notification', 'service', 'geoip' ]
+	file = Path(config.addon_data + 'settings.xml')
 
 	try:
-		tree = ET.parse(f'{config.addon_data}settings.xml')
+		with open(file, 'r') as f:
+			data = f.read()
+
+		root = ET.fromstring(data)
 	except:
 		return dict
 	else:
-		root = tree.getroot()
-
 		for item in root:
 			id = item.attrib['id']
 
