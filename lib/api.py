@@ -80,7 +80,7 @@ def getdata(type, loc, map=None):
 
 	# URL
 	if type == 'weather':
-		url = config.map_api.get(type).format(map[0], map[1])
+		url = config.map_api.get(type).format(map[0], map[1], config.maxdays)
 	elif type == 'airquality':
 		url = config.map_api.get(type).format(map[0], map[1])
 	elif type == 'sun':

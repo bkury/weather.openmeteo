@@ -8,6 +8,7 @@ from . import api
 def Main():
 	startup = True
 	utils.log(f'Starting service ...')
+	utils.setsetting('service', 'idle')
 	utils.log(config.addon_info, 3)
 
 	# Geolocation
@@ -66,10 +67,4 @@ def Main():
 
 	utils.log(f'Stopping service ...')
 	api.s.close()
-
-	# Workaround KODI issue (v0.9.5)
-	try:
-		utils.setsetting('service', 'stopped')
-	except:
-		pass
 

@@ -126,7 +126,7 @@ def speedconv(value, unit):
 		if unit == 'mph':
 			v = value / 1.609344
 		elif unit == 'm/min':
-			v = value * 16,667
+			v = value * 16.667
 		elif unit == 'm/s':
 			v = value / 3.6
 		elif unit == 'ft/h':
@@ -430,3 +430,47 @@ def season(lat):
 	else:
 		return utils.locaddon(32474) if n else utils.locaddon(32472)
 
+# Item
+def item(value, type, unit=True):
+
+	if type == 'temperature':
+		v = temp(value)
+		u = temp()
+	elif type == 'precipitation':
+		v = precip(value)
+		u = precip()
+	elif type == 'snow':
+		v = snow(value)
+		u = snow()
+	elif type == 'speed':
+		v = speed(value)
+		u = speed()
+	elif type == 'distance':
+		v = distance(value)
+		u = distance()
+	elif type == 'pressure':
+		v = pressure(value)
+		u = pressure()
+	elif type == 'uvindex':
+		v = temp(value, config.addon.uvindexdp)
+		u = ''
+	elif type == 'solarradiation':
+		v = dp(value, config.addon.radiationdp)
+		u = 'W/m²'
+	elif type == 'particles':
+		v = dp(value, config.addon.particlesdp)
+		u = 'μg/m³'
+	elif type == 'pollen':
+		v = dp(value, config.addon.pollendp)
+		u = f'{utils.locaddon(32456)}/m³'
+	else:
+		v = round(value)
+		u = ''
+
+	if value is False:
+		return u
+	else:
+		if unit:
+			return v, u
+		else:
+			return v
