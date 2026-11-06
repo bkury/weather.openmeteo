@@ -165,10 +165,16 @@ class Main():
 		# Update data
 		utils.log(f'[LOC{config.loc.id}] Updating data: {type}', 3)
 
+		# KODI reads these as metric input, only the KODI mode may set them
+		kodiprops = [ map[2] for map in config.map.get(type) if map[0] == 'currentkodi' ]
+
 		for map in config.map.get(type):
 
 			# Current (Compatibility)
 			if map[0] == 'current':
+				if not config.addon.api and map[2] in kodiprops:
+					continue
+
 				self.setmap(type, map)
 
 			# Current (Advanced)
