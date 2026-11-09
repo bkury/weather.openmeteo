@@ -32,6 +32,14 @@ class Main():
 			api.setloc(locid[3])
 			return
 
+		# First run: KODI asks before the service has found a location. Wait for it, and
+		# for the service to finish downloading, as only the service looks it up
+		if mode == 'kodi' and locid == '1' and not utils.setting('loc1') and utils.geoippending():
+			for i in range(60):
+				if utils.setting('loc1') or utils.monitor.waitForAbort(1):
+					break
+			utils.monitor.waitForService()
+
 		# Init
 		self.init(locid, mode)
 

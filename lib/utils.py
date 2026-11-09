@@ -113,6 +113,11 @@ def geoip(create=False):
 	else:
 		return f.is_file()
 
+# Whether the first run's lookup is still to come or under way
+def geoippending():
+	f = Path(f'{config.addon_data}/geoip')
+	return not f.is_file() or time.time() - f.stat().st_mtime < 120
+
 # Localization
 def loc(arg):
 	return xbmc.getLocalizedString(arg)
