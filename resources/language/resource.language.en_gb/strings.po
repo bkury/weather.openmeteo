@@ -566,6 +566,22 @@ msgctxt "#32401"
 msgid "Satellite"
 msgstr ""
 
+msgctxt "#32402"
+msgid "Light"
+msgstr ""
+
+msgctxt "#32403"
+msgid "Moderate"
+msgstr ""
+
+msgctxt "#32404"
+msgid "Heavy"
+msgstr ""
+
+msgctxt "#32405"
+msgid "Extreme"
+msgstr ""
+
 msgctxt "#32410"
 msgid "m"
 msgstr "m"
