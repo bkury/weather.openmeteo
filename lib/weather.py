@@ -8,6 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 from . import config
 from . import utils
 from . import conv
+from . import legend
 
 class Main():
 
@@ -581,7 +582,7 @@ class Main():
 				utils.addprop(f'Map.{index}.Layer', f'{dir}/{layer}_{ut}.png')
 				utils.addprop(f'Map.{index}.Heading', config.localization.layers.get(layer))
 				utils.addprop(f'Map.{index}.Time', f'{date} {time}')
-				utils.addprop(f'Map.{index}.Legend', '')
+				utils.addprop(f'Map.{index}.Legend', legend.get(layer))
 			else:
 				for item in [ 'area', 'layer', 'heading', 'time', 'legend' ]:
 					utils.addprop(f'Map.{index}.{item}', '')

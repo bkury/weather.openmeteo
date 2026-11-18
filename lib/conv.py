@@ -27,26 +27,29 @@ def time(unit, value):
 	return content
 
 # Temperature
+def tempraw(value, unit):
+	value = float(value)
+
+	if unit == '°F':
+		return value * 1.8 + 32
+	elif unit == 'K':
+		return value + 273.15
+	elif unit == '°Ré':
+		return value * 0.8
+	elif unit == '°Ra':
+		return value * 1.8 + 491.67
+	elif unit == '°Rø':
+		return value * 0.525 + 7.5
+	elif unit == '°D':
+		return value / -0.667 + 150
+	elif unit == '°N':
+		return value * 0.33
+	else:
+		return value
+
 def tempconv(value, unit, kodi=False):
 	if value is not False:
-		value = float(value)
-
-		if unit == '°F':
-			v = value * 1.8 + 32
-		elif unit == 'K':
-			v = value + 273.15
-		elif unit == '°Ré':
-			v = value * 0.8
-		elif unit == '°Ra':
-			v = value * 1.8 + 491.67
-		elif unit == '°Rø':
-			v = value * 0.525 + 7.5
-		elif unit == '°D':
-			v = value / -0.667 + 150
-		elif unit == '°N':
-			v = value * 0.33
-		else:
-			v = value
+		v = tempraw(value, unit)
 
 		if config.addon.tempdp == '0' or kodi is True:
 			return round(v)
@@ -119,34 +122,38 @@ def beaufort(value):
 
 	return v
 
+def speedraw(value, unit):
+	value = float(value)
+
+	if unit == 'mph':
+		return value / 1.609344
+	elif unit == 'm/min':
+		return value * 16.667
+	elif unit == 'm/s':
+		return value / 3.6
+	elif unit == 'ft/h':
+		return value * 3281
+	elif unit == 'ft/min':
+		return value * 54.681
+	elif unit == 'ft/s':
+		return value / 1.0971
+	elif unit == 'kts':
+		return value / 1.852
+	elif unit == 'inch/s':
+		return value * 10.936
+	elif unit == 'yard/s':
+		return value / 3.292
+	elif unit == 'Furlong/Fortnight':
+		return value * 1670
+	else:
+		return value
+
 def speedconv(value, unit):
 	if value is not False:
-		value = float(value)
-
-		if unit == 'mph':
-			v = value / 1.609344
-		elif unit == 'm/min':
-			v = value * 16.667
-		elif unit == 'm/s':
-			v = value / 3.6
-		elif unit == 'ft/h':
-			v = value * 3281
-		elif unit == 'ft/min':
-			v = value * 54.681
-		elif unit == 'ft/s':
-			v = value / 1.0971
-		elif unit == 'kts':
-			v = value / 1.852
-		elif unit == 'beaufort':
+		if unit == 'beaufort':
 			v = beaufort(value)
-		elif unit == 'inch/s':
-			v = value * 10.936
-		elif unit == 'yard/s':
-			v = value / 3.292
-		elif unit == 'Furlong/Fortnight':
-			v = value * 1670
 		else:
-			v = value
+			v = speedraw(value, unit)
 
 		if config.addon.speeddp == '0':
 			return round(v)
