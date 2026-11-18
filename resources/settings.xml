@@ -117,7 +117,7 @@
 		<category id="3" label="32281">
 
 			<group id="1" label="32260">
-				<setting id="mapzoom" type="integer" label="32285" help=""><level>0</level><default>8</default><constraints><minimum>2</minimum><step>1</step><maximum>10</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
+				<setting id="mapzoom" type="integer" label="32285" help=""><level>0</level><default>7</default><constraints><minimum>2</minimum><step>1</step><maximum>7</maximum></constraints><control type="slider" format="integer"><popup>false</popup></control></setting>
 				<setting id="maphistory" type="integer" label="32272" help=""><level>0</level><default>24</default><constraints><minimum>4</minimum><step>4</step><maximum>48</maximum></constraints><control type="slider" format="integer"><popup>false</popup><formatlabel>17998</formatlabel></control></setting>
 			</group>
 			<group id="2" label="32281">

@@ -15,10 +15,10 @@ map_api = {
 	'moon': 'https://api.met.no/weatherapi/sunrise/3.0/moon?lat={}&lon={}&date={}',
 	'osm': 'https://tile.openstreetmap.org/{}/{}/{}.png',
 	'rvindex': 'https://api.rainviewer.com/public/weather-maps.json',
-	'rvradar': 'https://tilecache.rainviewer.com{}/256/{}/{}/{}/4/1_1.png',
+	'rvradar': 'https://tilecache.rainviewer.com{}/256/{}/{}/{}/2/1_1.png',
 	'rvsatellite': 'https://tilecache.rainviewer.com{}/256/{}/{}/{}/0/0_0.png',
-	'gctemp': 'https://geo.weather.gc.ca/geomet?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX={},{},{},{}&CRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS=GDPS.ETA_TT&FORMAT=image/png',
-	'gcwind': 'https://geo.weather.gc.ca/geomet?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX={},{},{},{}&CRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS=GDPS.ETA_UU&FORMAT=image/png',
+	'gctemp': 'https://geo.weather.gc.ca/geomet?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX={},{},{},{}&CRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS=GDPS_15km_AirTemp_2m&FORMAT=image/png',
+	'gcwind': 'https://geo.weather.gc.ca/geomet?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX={},{},{},{}&CRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS=GDPS_15km_WindSpeed_10m&FORMAT=image/png',
 }
 
 # Limits

@@ -232,10 +232,10 @@ The addon provides several types of weather maps that can be displayed in suppor
 
 | Setting | Type | Range | Description |
 |---------|------|-------|-------------|
-| `mapzoom` | integer | 1-15 | Zoom level (higher = more detail, smaller area) |
+| `mapzoom` | integer | 2-7 | Zoom level (higher = more detail, smaller area). RainViewer radar tiles are only available up to zoom 7 |
 | `maphistory` | integer | 1-24 | Hours of historical map data to store for animations |
 | `maprvradar` | boolean | — | Enable RainViewer precipitation radar |
-| `maprvsatellite` | boolean | — | Enable RainViewer infrared satellite |
+| `maprvsatellite` | boolean | — | Enable RainViewer infrared satellite (RainViewer currently publishes no satellite frames, so this layer stays empty) |
 | `mapgctemp` | boolean | — | Enable temperature overlay map |
 | `mapgcwind` | boolean | — | Enable wind overlay map |
 | `maposm` | boolean | — | Enable OpenStreetMap base layer |
@@ -245,16 +245,13 @@ The addon provides several types of weather maps that can be displayed in suppor
 | Zoom | Coverage | Best For |
 |------|----------|----------|
 | 4-5 | Continental | Overview of weather systems |
-| 6-7 | Regional | Multi-country view |
-| 8-9 | Area | Single country / large region |
-| 10-11 | Local | City and surroundings |
-| 12+ | Detailed | Neighborhood level |
+| 6-7 | Regional | Multi-country view / large region |
 
-**Recommendation**: Zoom level 8 works well for most users, providing a good balance between detail and coverage.
+**Recommendation**: Zoom level 7 (the default) gives the most detail. Higher zoom levels are not offered because RainViewer's public API no longer serves radar tiles above zoom 7 (they show "Zoom Level Not Supported").
 
 ### Map Data Sources
 
-- **RainViewer**: Provides near-real-time precipitation radar and infrared satellite imagery with global coverage
+- **RainViewer**: Provides near-real-time precipitation radar with global coverage (public API: zoom 7 max, "Universal Blue" colour scheme only)
 - **weather.gc.ca**: Canadian government weather service (temperature and wind maps)
 - **met.no**: Norwegian Meteorological Institute (additional weather data)
 
